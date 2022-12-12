@@ -1,0 +1,84 @@
+.is-style-fancy-quote {
+    color: tomato;
+}
+:root {
+    --gallery-gap: 0.5rem;
+}
+
+figure.wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image),
+.gallery-wrapper .gallery-item {
+    width: 100%;
+    height: 100%;
+	margin: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .wp-block-gallery.has-nested-images.columns-3 figure.wp-block-image:not(#individual-image),
+    .gallery-wrapper .gallery-item {
+        width: calc(50% - var(--gallery-gap)/2);
+		margin: 0;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .wp-block-gallery.has-nested-images.columns-3 figure.wp-block-image:not(#individual-image),
+    .gallery-wrapper .gallery-item {
+		margin: 0;
+    }
+}
+
+
+.wp-block-gallery .wp-block-image.is-style-squared img,
+.gallery-wrapper .gallery-item img {
+    display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    object-position: center;
+	aspect-ratio: 1/1;
+    transition: all 300ms ease-in-out;
+}
+.wp-block-gallery .wp-block-image.is-style-squared,
+.gallery-wrapper .gallery-item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.wp-block-gallery .wp-block-image.is-style-squared:hover img,
+.wp-block-gallery .wp-block-image.is-style-squared:active img,
+.gallery-wrapper .gallery-item:hover img,
+.gallery-wrapper .gallery-item:active img {
+    transform: scale(1.1);
+}
+
+.wp-block-gallery figure.wp-block-image.is-style-squared:hover figcaption,
+.gallery-wrapper .gallery-item:hover h4 {
+    opacity: 1;
+}
+.wp-block-gallery figure.wp-block-image.is-style-squared figcaption,
+.gallery-wrapper .gallery-item h4 { 
+	margin: 0;
+	padding: 0;
+    padding-bottom: 0.5rem;
+    position: absolute;
+    inset: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.25rem;
+    width: 100%;
+    height: 100%;
+	min-height: 100%;
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+}
+
+.is-style-post_img_small {
+    max-width: 250px;
+    max-height: 250px;
+}
+.is-style-post_img_small img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}

@@ -1,0 +1,114 @@
+@media only screen and (min-width: 0px) {
+
+    #main h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    /* ================ */
+    /*      About       */
+    /* ================ */
+
+    #about {
+        display:flex;
+        flex-direction: column;
+        padding-top: 0;
+        padding-bottom: 75px;
+    }
+    #about .about-left {
+        order: 2;
+        padding: 0 10px;
+        padding-top: 50px;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+    #about .about-right {
+        background: url(/images/HelloIMG1627399685471.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 50%;
+        order: 1;
+        margin-bottom: 50px;
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    #about {
+        padding-top: 75px;
+        flex-direction: row;
+    }
+    #about .about-left {
+        width: 50%;
+        padding-right: 30px;
+        order: 1;
+        margin: 0;
+        margin-left: auto;
+    }
+    #about .about-right {
+        display: flex;
+        order: 2;
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    
+}
+
+@media only screen and (min-width: 1300px) {
+    main {
+        margin: auto;
+        max-width: 1200px;
+    }
+}
+
+/* ================ */
+/*       Info       */
+/* ================ */
+
+#info {
+    padding: 0 30px;
+}
+.info-wrapper {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 150px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.info-wrapper .item {
+    flex: 0 0 calc(50%);
+    min-width: 275px;
+    max-width: 300px;
+    margin: 32px 0;
+}
+.info-wrapper .icon {
+    position: relative;
+    height: 72px; width: 72px;
+}
+.info-wrapper .icon::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%; width: 100%;
+    border-radius: 50%;
+    background-color: #48A43F;
+    top:0; left: 0;
+    z-index: -1;
+}
+.info-wrapper .icon img {
+    transform: translate(25%, 25%);
+}
+.info-wrapper .item h3 {
+    font-weight: bold;
+    margin: 20px 0;
+}
+.info-wrapper .item p {
+    color: #737373;
+}
